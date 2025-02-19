@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Content-Security-Policy to allow external resources -->
+    <title>Event Management and Planning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Our Gallery</a></li>
+                <li class="logo-container">
+                    <a href="images/image.jpg" name="logo">
+                        <img src="images/image.jpg" alt="Logo" class="logo">
+                    </a>
+                </li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#contact">Contact Us</a></li>     
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>RIYAZ</h1>
+        <p>Event Management and Planning</p>
+        <h4>Since 2001</h4>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We specialize in creating unforgettable events tailored to your needs. We are here for you!</p>
+        <a href="#contact" class="button-link">
+            <button type="button">Contact Us</button>
+        </a>
+    </section>
+   
+    
+    
+   
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <p class="subtitle">Elevate Your Celebrations with Riyaz Events</p>
+            <p class="description">
+                At Riyaz Events, we don’t just plan events—we craft unforgettable experiences that reflect your vision and personality. Whether it’s a fairy-tale wedding, an elegant corporate gala, or a milestone celebration, we take care of every detail so you can cherish every moment stress-free.
+            </p>
+    
+            <!-- Service Cards -->
+            <div class="service-cards">
+                <!-- Service 1: Luxury Wedding Planning -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i> <!-- Wedding Ring Icon -->
+                    </div>
+                    <h3>Luxury Wedding Planning</h3>
+                    <p>Because your wedding should be nothing short of magical. We turn dreams into reality with flawless planning and breathtaking execution.</p>
+                    <ul>
+                        <li>Full-Service Wedding Planning</li>
+                        <li>Destination Weddings</li>
+                        <li>Cultural & Traditional Weddings</li>
+                        <li>Bespoke & Intimate Weddings</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    
+                <!-- Service 2: Social Events & Private Celebrations -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-birthday-cake"></i> <!-- Birthday Cake Icon -->
+                    </div>
+                    <h3>Social Events & Private Celebrations</h3>
+                    <p>Make every milestone memorable with bespoke themes and impeccable execution.</p>
+                    <ul>
+                        <li>Themed Birthday Parties</li>
+                        <li>Anniversaries & Family Gatherings</li>
+                        <li>Baby Showers & Naming Ceremonies</li>
+                        <li>Festivals & Cultural Events</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    
+                <!-- Service 3: Corporate & Business Events -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i> <!-- Briefcase Icon -->
+                    </div>
+                    <h3>Corporate & Business Events</h3>
+                    <p>Create an impact with seamless business events that leave a lasting impression.</p>
+                    <ul>
+                        <li>Conferences & Seminars</li>
+                        <li>Product Launches & Brand Activations</li>
+                        <li>Corporate Retreats & Gala Dinners</li>
+                        <li>Award Ceremonies & Annual Functions</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    
+                <!-- Service 4: Event Design & Aesthetics -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i> <!-- Palette Icon -->
+                    </div>
+                    <h3>Event Design & Aesthetics</h3>
+                    <p>Transform your event into a stunning visual experience.</p>
+                    <ul>
+                        <li>Creative Theme Conceptualization</li>
+                        <li>Floral Installations & Decor</li>
+                        <li>Luxury Tablescapes & Seating Plans</li>
+                        <li>3D Event Visualization</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    
+                <!-- Service 5: Entertainment & Talent Management -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone-alt"></i> <!-- Microphone Icon -->
+                    </div>
+                    <h3>Entertainment & Talent Management</h3>
+                    <p>Captivate your audience with the best talent and entertainment.</p>
+                    <ul>
+                        <li>Live Bands & DJs</li>
+                        <li>Celebrity & Influencer Bookings</li>
+                        <li>Cultural & Dance Performances</li>
+                        <li>Fireworks & Special Effects</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+    
+                <!-- Service 6: Gourmet Catering & Hospitality -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i> <!-- Utensils Icon -->
+                    </div>
+                    <h3>Gourmet Catering & Hospitality</h3>
+                    <p>An exceptional event deserves an extraordinary dining experience.</p>
+                    <ul>
+                        <li>Customized Multi-Cuisine Menus</li>
+                        <li>Luxury Fine Dining & Buffet Services</li>
+                        <li>Signature Cocktails & Premium Bartending</li>
+                        <li>Guest Concierge & Accommodation Management</li>
+                    </ul>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="career" class="career">
+        <h2>Career</h2>
+        <p>Join our team and be part of creating amazing events.</p>
+    </section>
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <!-- Left Column (Image) -->
+            <div class="left-col">
+               
+            </div>
+    
+            <!-- Right Column (Form) -->
+            <div class="right-col">
+                <h1>Contact Us</h1>
+
+                <p>📅 Book a Free Quote/Consultation Today!</p>
+                <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
+    
+                <!-- Contact Form -->
+                <form id="contact-form" method="post"action="submit-form.php">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>  
+                    <div class="form-group">
+                        <label for="eventdate">Event Date</label>
+                        <input type="date" id="eventdate" name="eventdate" required>
+                    </div>      
+                    <div class="form-group select-wrapper">
+                        <label for="eventtype">Event Type</label>
+                        <select id="eventtype" name="eventtype" required>
+                            <option value="">Select an option</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea rows="6" id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+    
+                    <div class="form-group text-center">
+                        <button type="submit" id="submit" name="submit">Send</button>
+                    </div>
+                </form>
+    
+               
+                
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="box-container">
+            <!-- Quick Links -->
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Service </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> About </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Gallery </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Pricing </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Contact </a>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="box">
+                <h3>📞 Get in Touch</h3>
+                <a href="tel:+917350600038"><i class="fas fa-phone"></i> +91 7350600038</a>
+                <a href="mailto:riyaz.events@hotmail.com"> <i class="fas fa-envelope"></i> riyaz.events@hotmail.com</a>
+                <a href="https://maps.app.goo.gl/GWtFMiihnzKVe3Ei8" target="_blank"> <i class="fas fa-map-marker-alt"></i>📍Goa,india </a>
+            </div>
+    
+            <!-- Business Hours -->
+            <div class="box">
+                <h3>🕒 Business Hours</h3>
+                <p>Monday – Saturday: 10:00 AM – 7:00 PM</p>
+                <p>Sunday: By Appointment Only</p>
+                <h3>📍 Visit Us</h3>
+                <p>Drop by our office for a cup of coffee and a personalized consultation.</p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="box">
+                <h3>🤝 Follow Us</h3>
+                <a href="https://instagram.com/RKevents2001" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://facebook.com/RiyazEvents" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://linkedin.com/company/riyazevents" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    
+        <!-- Footer Credit -->
+        <div class="credit">
+            <p>Let’s turn your dream event into reality! Reach out today.</p>
+            <p>&copy; 2025 Riyaz Events. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
