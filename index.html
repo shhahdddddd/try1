@@ -31,10 +31,56 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>RIYAZ</h1>
-        <p>Event Management and Planning</p>
-        <h4>Since 2001</h4>
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="right-col">
+                <h1>Speak To Our Experts</h1>
+                <p>📅 Book a Free Quote/Consultation Today!</p>
+                <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
+    
+                <!-- Contact Form -->
+                <form id="contact-form" method="post"action="submit-form.php">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>  
+                    <div class="form-group">
+                        <label for="eventdate">Event Date</label>
+                        <input type="date" id="eventdate" name="eventdate" required>
+                    </div>      
+                    <div class="form-group select-wrapper">
+                        <label for="eventtype">Event Type</label>
+                        <select id="eventtype" name="eventtype" required>
+                            <option value="">Select an option</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea rows="6" id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+    
+                    <div class="form-group text-center">
+                        <button type="submit" id="submit" name="submit">Send</button>
+                    </div>
+                </form>
+    
+               
+                
+            </div>
+        </div>
     </section>
 
     <section id="about" class="about">
@@ -44,11 +90,6 @@
             <button type="button">Contact Us</button>
         </a>
     </section>
-   
-    
-    
-   
-
     <section id="services" class="services">
         <div class="services-container">
             <h2>Our Services</h2>
@@ -157,73 +198,64 @@
             </div>
         </div>
     </section>
+    <div class="container">
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+                <img src="3.jpeg" alt="Cinque Terre">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_forest.jpg">
+                <img src="djdjjdjd.png" alt="Forest">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_lights.jpg">
+                <img src="zhhzhzhz.jpg" alt="Northern Lights">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_mountains.jpg">
+                <img src="777.jpg" alt="Mountains">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+</div>
+
 
     <section id="career" class="career">
         <h2>Career</h2>
         <p>Join our team and be part of creating amazing events.</p>
     </section>
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <!-- Left Column (Image) -->
-            <div class="left-col">
-               
-            </div>
-    
-            <!-- Right Column (Form) -->
-            <div class="right-col">
-                <h1>Contact Us</h1>
-
-                <p>📅 Book a Free Quote/Consultation Today!</p>
-                <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
-    
-                <!-- Contact Form -->
-                <form id="contact-form" method="post"action="submit-form.php">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Your Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                    </div>  
-                    <div class="form-group">
-                        <label for="eventdate">Event Date</label>
-                        <input type="date" id="eventdate" name="eventdate" required>
-                    </div>      
-                    <div class="form-group select-wrapper">
-                        <label for="eventtype">Event Type</label>
-                        <select id="eventtype" name="eventtype" required>
-                            <option value="">Select an option</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="corporate">Corporate</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-    
-    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea rows="6" id="message" name="message" placeholder="Your Message" required></textarea>
-                    </div>
-    
-                    <div class="form-group text-center">
-                        <button type="submit" id="submit" name="submit">Send</button>
-                    </div>
-                </form>
-    
-               
-                
-            </div>
+    <section class="budget-venue">
+        <div class="left-text">
+            <p class="subtitle">
+                Get expert help in important decisions such as how much to spend and which venue to book.
+            </p>
+            <p class="description">
+                Our experience delivering 1,000+ weddings will help you make the right choices, faster.
+            </p>
+        </div>
+        <div class="right-content">
+            <h2 class="right-title">Budget & Venue Consultation</h2>
+            <img src="shahdouda.jpeg" alt="Budget Venue" class="venue-image" width="500px" height="500px">
         </div>
     </section>
-
-
+    
     <footer class="footer">
         <div class="box-container">
             <!-- Quick Links -->
