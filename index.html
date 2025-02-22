@@ -30,16 +30,26 @@
             </ul>
         </nav>
     </header>
-
+    
     <section id="contact" class="contact">
         <div class="contact-container">
+            <div class="video-wrapper">
+                <video autoplay muted loop id="video-background">
+                    <source src="111111.mp4" type="video/mp4">
+                </video>
+                <div class="video-text">
+                    <h2>Event Planning and Management</h2>
+                    <h6>RIYAZ. Since 2001</h6>
+                </div>
+            </div>
+    
             <div class="right-col">
                 <h1>Speak To Our Experts</h1>
                 <p>📅 Book a Free Quote/Consultation Today!</p>
                 <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
     
                 <!-- Contact Form -->
-                <form id="contact-form" method="post"action="submit-form.php">
+                <form id="contact-form" method="post" action="submit-form.php">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -49,14 +59,17 @@
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" placeholder="Your Email Address" required>
                     </div>
+    
                     <div class="form-group">
                         <label for="phone">Your Phone Number</label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                     </div>  
+    
                     <div class="form-group">
                         <label for="eventdate">Event Date</label>
                         <input type="date" id="eventdate" name="eventdate" required>
                     </div>      
+    
                     <div class="form-group select-wrapper">
                         <label for="eventtype">Event Type</label>
                         <select id="eventtype" name="eventtype" required>
@@ -67,6 +80,7 @@
                             <option value="other">Other</option>
                         </select>
                     </div>
+    
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea rows="6" id="message" name="message" placeholder="Your Message" required></textarea>
@@ -76,12 +90,10 @@
                         <button type="submit" id="submit" name="submit">Send</button>
                     </div>
                 </form>
-    
-               
-                
             </div>
         </div>
     </section>
+    
 
     <section id="about" class="about">
         <h2>About Us</h2>
@@ -198,43 +210,52 @@
             </div>
         </div>
     </section>
-    <div class="container">
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img_5terre.jpg">
-                <img src="3.jpeg" alt="Cinque Terre">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div>
+<!-- Gallery -->
+<div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="zhhzhzhz.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+  
+      <img
+        src="1.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
-                <img src="djdjjdjd.png" alt="Forest">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="Transform Your Wedding with the Perfect Color Palettes! - VenueLook Blog.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds"
+      />
+  
+      <img
+        src="C:\Users\bentb\Downloads\try1-master\try1-master\try1-master\When love and classic hues take over! 🤍.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img_lights.jpg">
-                <img src="zhhzhzhz.jpg" alt="Northern Lights">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="3.jpeg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Waves at Sea"
+      />
+  
+      <img
+        src="Bollywood Birthday Bash at Concorde Banquets in Kildeer, IL _ PartySlate.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park"
+      />
     </div>
-
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="img_mountains.jpg">
-                <img src="777.jpg" alt="Mountains">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-        </div>
-    </div>
-</div>
+  </div>
+  <!-- Gallery -->
+    
 
 
     <section id="career" class="career">
