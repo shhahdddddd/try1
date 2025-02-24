@@ -40,6 +40,7 @@
                 <div class="video-text">
                     <h2>RIYAZ</h2>
                     <h6>Event Management and planning.</h6>
+                    <h5>Our vision, your Excecution</h5>
                 </div>
             </div>
     
@@ -47,8 +48,6 @@
                 <h1>Speak To Our Experts</h1>
                 <p>📅 Book a Free Quote/Consultation Today!</p>
                 <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
-    
-                <!-- Contact Form -->
                 <form id="contact-form" method="post" action="submit-form.php">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -100,8 +99,9 @@
         <p>We specialize in creating unforgettable events tailored to your needs. We are here for you!</p>
         <p>Founded in 2001, our event planning management company has been dedicated to delivering exceptional experiences, ensuring every detail is flawlessly executed.</p>
         <a href="#contact" class="button-link">
-            <button type="button">Plan it</button>
+            <button type="button">Plan now</button>
         </a>
+        
     </section>
     <section id="services" class="services">
         <div class="services-container">
@@ -225,6 +225,12 @@
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Wintry Mountain Landscape"
       />
+      <img
+        src="download (60).jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
+     
     </div>
   
     <div class="col-lg-4 mb-4 mb-lg-0">
@@ -236,6 +242,16 @@
   
       <img
         src="C:\Users\bentb\Downloads\try1-master\try1-master\try1-master\When love and classic hues take over! 🤍.jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+      <img
+        src="download (61).jpg"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+      <img
+        src="Modern Mayoun Setup 🌸.jpg"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Boat on Calm Water"
       />
@@ -253,16 +269,40 @@
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Yosemite National Park"
       />
+      <img src="shahdouda.jpeg" class="w-100 shadow-1-strong rounded mb-4" alt="Custom Image">
+
     </div>
   </div>
   <!-- Gallery -->
-    
-
-
     <section id="career" class="career">
         <h2>Career</h2>
         <p>Join our team and be part of creating amazing events.</p>
+        <button id="openModal">Join our team </button>
     </section>
+    <div id="careerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Apply for a Position</h3>
+            <form id="careerForm">
+                <label for="position">Select Position:</label>
+                <select id="position" name="position" required>
+                    <option value="Event Coordinator">Event Coordinator</option>
+                    <option value="Assistant Decorator">Assistant Decorator</option>
+                </select>
+    
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <button type="submit">Send Application</button>
+            </form>
+        </div>
+    </div>
     <section class="budget-venue">
         <div class="left-text">
             <p class="subtitle">
@@ -274,7 +314,10 @@
         </div>
         <div class="right-content">
             <h2 class="right-title">Budget & Venue Consultation</h2>
-            <img src="shahdouda.jpeg" alt="Budget Venue" class="venue-image" width="500px" height="500px">
+            <video autoplay loop muted playsinline>
+                <source src="vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
     
