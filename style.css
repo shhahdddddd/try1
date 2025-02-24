@@ -65,10 +65,9 @@ nav ul li a:hover {
 }
 
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 3px solid var(--primary-color);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -179,6 +178,7 @@ button {
 button:hover {
     background-color: var(--secondary-color); /* You can set your secondary color here */
 }
+
 
 
 /* Services Section */
@@ -307,7 +307,7 @@ button:hover {
 }
 /* Career Section */
 .career {
-    padding: 100px 20px;
+    padding: 30px 20px;
     background-color: var(--background-color);
     text-align: center;
 }
@@ -330,6 +330,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 /* Column Setup */
@@ -367,7 +368,7 @@ button:hover {
 
 /* Optional: Adjust spacing between images */
 .mb-4 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -381,7 +382,7 @@ button:hover {
     z-index: -1;
 }
 
-/* Text on Video */
+
 .video-text {
     position: absolute;
     top: 70%;
@@ -390,14 +391,21 @@ button:hover {
     text-align: center;
 }
 
+.video-text h2, 
+.video-text h6, 
+.video-text h5 {
+    margin-top: 15px;  /* Equal spacing above */
+    margin-bottom: 15px; /* Equal spacing below */
+}
+
 .video-text h2 {
-    font-size: 50px; /* Increased size */
+    font-size: 62px; 
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
+    font-family: "Playfair Display", serif; /* More elegant & royal */
     color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 10px;
-    background: linear-gradient(45deg, #f48403bc, #e23272);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    background: linear-gradient(45deg, #ff8800bc, #e23272);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -408,9 +416,19 @@ button:hover {
     color: rgba(255, 255, 255, 0.8);
     font-family: "Poppins", sans-serif;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
-    letter-spacing: 0.5px;
-    margin-top: -5px; /* Bring it closer to h2 */
+    letter-spacing: 1px;
 }
+
+.video-text h5 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    color: rgba(231, 231, 231, 0.9);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    text-decoration: none; /* Ensure no underline */
+}
+
 
 /* Adjust Contact Form Positioning */
 .contact-container {
@@ -555,6 +573,118 @@ button[type="submit"]:hover {
         padding: 7px;
     }
 }
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+}
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Gradient for a modern feel */
+    padding: 25px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth appearance */
+}
+
+/* Close Button */
+.close {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+    background: #eee;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.close:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: 0.3s;
+    outline: none;
+    background: #fafafa;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus {
+    border-color: #e97a19;
+    background: white;
+    box-shadow: 0px 0px 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Submit Button */
+button {
+    background: #d72f86;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e02e7b;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 .budget-venue {
@@ -562,7 +692,7 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background: #fdfaf6;
+    background: #edebe8;
     max-width: 1200px;
     margin: 0 auto; /* Centers the section */
     gap: 40px; /* Adds spacing between text and image */
@@ -604,6 +734,12 @@ button[type="submit"]:hover {
     max-width: 80%; /* Allows better text wrapping */
     white-space: normal; /* Allows wrapping */
     margin-bottom: 10px;
+}
+.right-content video {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px; /* Limits video size */
+    height: auto; /* Keeps aspect ratio */
 }
 
 .venue-image {
