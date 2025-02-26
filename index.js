@@ -10,11 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         delay: 0.5
     });
 
-    // Hero Section Animation
    
-
-  
-    // About Section Animation
     gsap.from("#about", {
         duration: 1,
         opacity: 0,
@@ -41,6 +37,30 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    gsap.from(".video-text h2", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        ease: "power2.out",
+        delay: 0.8
+    });
+
+    gsap.from(".video-text h6", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        ease: "power2.out",
+        delay: 1.2
+    });
+
+    gsap.from(".video-text h5", {
+        duration: 1,
+        opacity: 0,
+        y: 30,
+        ease: "power2.out",
+        delay: 1.5
+    });
+
 
     // Contact Form Animation
     gsap.from("#contact-form", {
@@ -69,30 +89,39 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const careerModal = document.getElementById("careerModal");
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = document.querySelector(".close");
+    const careerForm = document.getElementById("careerForm");
 
-document.getElementById("openModal").addEventListener("click", function() {
-    document.getElementById("careerModal").style.display = "flex";
+    // Open Modal
+    openModalBtn.addEventListener("click", function() {
+        careerModal.style.display = "flex"; // Show modal
+    });
+
+    // Close Modal when clicking the close button (X)
+    closeModalBtn.addEventListener("click", function() {
+        careerModal.style.display = "none"; // Close modal
+    });
+
+    // Close Modal when clicking outside the modal content
+    window.addEventListener("click", function(event) {
+        if (event.target === careerModal) {
+            careerModal.style.display = "none"; // Close modal
+        }
+    });
+
+    // Handle Form Submission
+    careerForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        alert("Application submitted successfully!"); // You can replace this with actual form submission via AJAX if desired
+
+        // Close Modal after submission
+        careerModal.style.display = "none";
+    });
 });
 
-document.querySelector(".close").addEventListener("click", function() {
-    document.getElementById("careerModal").style.display = "none";
-});
 
-document.getElementById("careerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from reloading the page
-
-    let position = document.getElementById("position").value;
-    let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
-    let email = document.getElementById("email").value;
-
-    // Create mailto link
-    let mailtoLink = `mailto:youremail@example.com?subject=Job Application - ${position}&body=Name: ${name}%0D%0AAge: ${age}%0D%0AEmail: ${email}`;
-
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Close modal after sending email
-    document.getElementById("careerModal").style.display = "none";
-});
 
