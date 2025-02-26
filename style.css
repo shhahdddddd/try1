@@ -144,7 +144,7 @@ nav ul li a:hover {
 
 /* About Section */
 .about {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: var(--white);
     text-align: center;
 }
@@ -184,7 +184,7 @@ button:hover {
 /* Services Section */
 .services {
     background: var(--white);
-    padding: 80px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -330,25 +330,31 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Reduce bottom margin */
 }
 
 /* Column Setup */
 .col-lg-4,
 .col-md-12 {
-    padding: 10px;
+    padding: 5px; /* Reduce column padding */
 }
 
 /* Image Styling */
 .w-100 {
     width: 100%;
-    max-width: 280px; /* Limit the width to make images smaller */
-    margin: 0 auto; /* Center images inside the column */
+    max-width: 400px; /* Limit the width to make images smaller */
+    margin: 0; /* Remove extra margin */
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image depth */
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
+
+/* Reduce spacing between images */
+.mb-4 {
+    margin-bottom: 1px !important; /* Force reduction in gap */
+}
+
 
 /* Hover Effect for Images */
 .w-100:hover {
@@ -368,7 +374,7 @@ button:hover {
 
 /* Optional: Adjust spacing between images */
 .mb-4 {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 
@@ -400,7 +406,7 @@ button:hover {
 
 .video-text h2 {
     font-size: 62px; 
-    font-weight: bold;
+    font-weight: bolder;
     font-family: "Playfair Display", serif; /* More elegant & royal */
     color: white;
     text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
@@ -420,7 +426,7 @@ button:hover {
 }
 
 .video-text h5 {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     color: rgba(231, 231, 231, 0.9);
@@ -449,7 +455,7 @@ button:hover {
 
 
 .contact {
-    padding: 40px 0;
+    padding: 10px 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: flex-end; /* Align content to the right */
@@ -470,7 +476,7 @@ button:hover {
 
 /* Contact Text */
 .right-col p {
-    font-size: 13px;
+    font-size: 14px;
     color: #525050;
     margin-bottom: 10px;
     text-align: center;
@@ -588,12 +594,15 @@ button[type="submit"]:hover {
     align-items: center;
     backdrop-filter: blur(5px); /* Subtle blur effect */
 }
-
+#careerModal{
+    display: none;
+}
 /* Modal Content */
 .modal-content {
     background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Gradient for a modern feel */
     padding: 25px;
     width: 380px;
+    position: relative;
     border-radius: 12px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -706,9 +715,9 @@ button:hover {
 
 .subtitle,
 .description {
-    font-size: 1.8rem; /* Slightly smaller for better readability */
+    font-size: 1rem; /* Slightly smaller for better readability */
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 200;
     line-height: 1.6;
     color: #3a2a1b;
     margin-bottom: 10px; /* Adds spacing between text elements */
@@ -726,7 +735,7 @@ button:hover {
 }
 
 .right-title {
-    font-size: 2.5rem; /* Slightly reduced for better balance */
+    font-size: 2rem; /* Slightly reduced for better balance */
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     color: #5a3a1b;
@@ -840,4 +849,274 @@ button:hover {
 
 .footer .credit p {
     margin: 0.5rem 0; /* Reduced margin */
+}
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Base Typography */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.2rem; }
+    p { font-size: 1rem; }
+
+    /* Layout */
+    .container {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .row {
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Header & Navigation - NON-FIXED & HORIZONTAL */
+ /* Header & Navigation - NON-FIXED & HORIZONTAL */
+    /* Header & Navigation - NON-FIXED & HORIZONTAL */
+    header {
+        padding: 8px 10px;
+        position: relative; /* Standard positioning, not fixed */
+        z-index: 100;
+        background-color: #fff;
+    }
+    
+    .logo {
+        width: 60px;
+        height: auto;
+    }
+    
+    nav {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+    
+    nav ul {
+        display: inline-flex; /* Use inline-flex to prevent wrapping */
+        flex-direction: row; /* Keep navbar items horizontal */
+        justify-content: flex-start; /* Align items to the start */
+        gap: 10px; /* Space between items */
+        padding: 0;
+        margin: 5px 0;
+    }
+    
+    nav ul li {
+        margin: 0; /* Remove margin */
+        text-align: center;
+        display: inline-block; /* Ensure horizontal alignment */
+        white-space: nowrap; /* Prevent text wrapping */
+        flex-shrink: 0; /* Prevent shrinking */
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem; /* Smaller font for horizontal fit */
+        padding: 5px 8px;
+        display: inline-block; /* Better for horizontal menu items */
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        margin-bottom: 15px;
+    }
+
+    #video-background {
+        height: auto;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    .video-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        width: 90%;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    .video-text h2 {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+    }
+
+    .video-text h6 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .video-text h5 {
+        font-size: 1.1rem;
+    }
+
+    /* Section Spacing */
+    section {
+        padding: 30px 15px;
+        margin: 0 0 20px 0;
+    }
+
+    /* Card Layouts */
+    .service-cards,
+    .box-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-card,
+    .box {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    /* About Section */
+    .about {
+        text-align: center;
+    }
+
+    /* Services Section */
+    .services .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .services .description {
+        font-size: 0.9rem;
+    }
+
+    /* Budget Venue Section */
+    .budget-venue {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .left-text,
+    .right-content {
+        max-width: 100%;
+    }
+
+    .right-content video {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact Form */
+    .contact {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .footer .box-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        
+    }
+    .footer .box {
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    .footer .box h3 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+    .footer .box a {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+    .footer .box p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+
+    .footer .credit {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    /* Image Handling */
+    .w-100 {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        transition: none;
+    }
+
+    /* Spacing Utilities */
+    .mb-sm {
+        margin-bottom: 10px;
+    }
+    
+    .mb-md {
+        margin-bottom: 20px;
+    }
+    
+    .mb-lg {
+        margin-bottom: 30px;
+    }
 }
