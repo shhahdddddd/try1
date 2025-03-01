@@ -715,7 +715,7 @@ button:hover {
 
 .subtitle,
 .description {
-    font-size: 1rem; /* Slightly smaller for better readability */
+    font-size: 2rem; /* Slightly smaller for better readability */
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     line-height: 1.6;
@@ -747,15 +747,15 @@ button:hover {
 .right-content video {
     width: 100%;
     max-width: 500px;
-    max-height: 500px; /* Limits video size */
-    height: auto; /* Keeps aspect ratio */
+    max-height: 500px; 
+    height: auto; 
 }
 
 .venue-image {
     width: 100%;
-    max-width: 450px; /* Limits image size */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Optional: Adds soft rounded corners */
+    max-width: 450px; 
+    height: auto; 
+    border-radius: 10px; 
 }
 
 /* Responsive Design */
@@ -851,102 +851,120 @@ button:hover {
     margin: 0.5rem 0; /* Reduced margin */
 }
 /* Mobile Responsive Styles */
+/* Mobile Responsive Styles */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-    /* Base Typography */
+    /* Base Typography with Responsive Units */
+    :root {
+        --heading-scale: 1;
+        --text-scale: 1;
+        --spacing-unit: 8px;
+    }
+    
     body {
-        font-size: 14px;
+        font-size: clamp(14px, 3.5vw, 16px);
         line-height: 1.5;
     }
 
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.2rem; }
-    p { font-size: 1rem; }
+    /* More consistent heading hierarchy using rem */
+    h1 { font-size: calc(2.5rem * var(--heading-scale)); }
+    h2 { font-size: calc(2rem * var(--heading-scale)); }
+    h3 { font-size: calc(1.5rem * var(--heading-scale)); }
+    h4 { font-size: calc(1.2rem * var(--heading-scale)); }
+    p { font-size: calc(1rem * var(--text-scale)); }
 
-    /* Layout */
+    /* Layout - Using more modern approaches */
     .container {
-        padding: 0 15px;
+        padding: 0 calc(var(--spacing-unit) * 2);
         width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
     }
 
+    /* Better row management */
     .row {
+        display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
-        gap: 15px;
+        margin-bottom: calc(var(--spacing-unit) * 2.5);
+        gap: calc(var(--spacing-unit) * 2);
     }
 
+    /* Simplified column handling */
     [class*="col-"] {
         width: 100%;
-        padding: 10px;
+        padding: calc(var(--spacing-unit) * 1.25);
     }
-
-    /* Header & Navigation - NON-FIXED & HORIZONTAL */
- /* Header & Navigation - NON-FIXED & HORIZONTAL */
-    /* Header & Navigation - NON-FIXED & HORIZONTAL */
+    
+    /* Header - Improved structure */
     header {
-        padding: 8px 10px;
-        position: relative; /* Standard positioning, not fixed */
+        padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 1.25);
+        position: sticky; /* Better for mobile UX in most cases */
+        top: 0;
         z-index: 100;
         background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
     }
     
     .logo {
-        width: 60px;
+        width: 50px; /* Reduced from 60px */
         height: auto;
     }
     
+    /* Navigation improvements */
     nav {
         width: 100%;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping */
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    }
+    
+    nav::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome/Safari */
     }
     
     nav ul {
-        display: inline-flex; /* Use inline-flex to prevent wrapping */
-        flex-direction: row; /* Keep navbar items horizontal */
-        justify-content: flex-start; /* Align items to the start */
-        gap: 10px; /* Space between items */
+        display: flex;
         padding: 0;
-        margin: 5px 0;
+        margin: calc(var(--spacing-unit) * 0.6) 0;
+        gap: calc(var(--spacing-unit) * 1.25);
     }
     
     nav ul li {
-        margin: 0; /* Remove margin */
-        text-align: center;
-        display: inline-block; /* Ensure horizontal alignment */
-        white-space: nowrap; /* Prevent text wrapping */
-        flex-shrink: 0; /* Prevent shrinking */
+        margin: 0;
+        flex-shrink: 0;
     }
     
     nav ul li a {
-        font-size: 0.9rem; /* Smaller font for horizontal fit */
-        padding: 5px 8px;
-        display: inline-block; /* Better for horizontal menu items */
+        font-size: 0.9rem;
+        padding: calc(var(--spacing-unit) * 0.6) calc(var(--spacing-unit));
+        display: block;
         color: var(--text-color);
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
     }
     
-    nav ul li a:hover {
+    nav ul li a:hover,
+    nav ul li a:focus {
         color: var(--primary-color);
+        transform: translateY(-2px);
     }
 
-    /* Hero Section */
+    /* Hero Section - More responsive approach */
     .hero {
-        padding: 40px 15px;
+        padding: calc(var(--spacing-unit) * 5) calc(var(--spacing-unit) * 2);
         text-align: center;
     }
 
     .hero h1 {
-        margin-bottom: 15px;
+        margin-bottom: calc(var(--spacing-unit) * 2);
     }
 
     #video-background {
         height: auto;
-        min-height: 300px;
+        min-height: 250px; /* Reduced from 300px */
         object-fit: cover;
+        width: 100%;
     }
 
     .video-text {
@@ -956,42 +974,53 @@ button:hover {
         transform: translate(-50%, -50%);
         text-align: center;
         color: white;
-        width: 90%;
+        width: 85%; /* Reduced from 90% */
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        padding: calc(var(--spacing-unit) * 1.5); /* Reduced padding */
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
     }
+    
     .video-text h2 {
-        font-size: 2.2rem;
-        margin-bottom: 5px;
+        font-size: 2rem; /* Reduced from 2.2rem */
+        margin-bottom: calc(var(--spacing-unit) * 0.6);
     }
 
     .video-text h6 {
-        font-size: 1rem;
-        margin-bottom: 5px;
+        font-size: 0.9rem; /* Reduced from 1rem */
+        margin-bottom: calc(var(--spacing-unit) * 0.6);
     }
 
     .video-text h5 {
-        font-size: 1.1rem;
+        font-size: 1rem; /* Reduced from 1.1rem */
     }
 
-    /* Section Spacing */
+    /* Section Spacing - Using variables for consistency */
     section {
-        padding: 30px 15px;
-        margin: 0 0 20px 0;
+        padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2); /* Reduced padding */
+        margin: 0 0 calc(var(--spacing-unit) * 2.5) 0;
     }
 
-    /* Card Layouts */
+    /* Card Layouts - Grid instead of flexbox for more consistent layouts */
     .service-cards,
     .box-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(var(--spacing-unit) * 2);
     }
 
     .service-card,
     .box {
         width: 100%;
-        margin-bottom: 15px;
-        padding: 15px;
+        padding: calc(var(--spacing-unit) * 1.5); /* Reduced padding */
+        border-radius: 6px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-card:hover,
+    .box:hover {
+        transform: translateY(-3px); /* Reduced from -5px */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow */
     }
 
     /* About Section */
@@ -1001,8 +1030,8 @@ button:hover {
 
     /* Services Section */
     .services .subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+        font-size: 1.1rem; /* Reduced from 1.2rem */
+        margin-bottom: calc(var(--spacing-unit));
     }
 
     .services .description {
@@ -1011,10 +1040,20 @@ button:hover {
 
     /* Budget Venue Section */
     .budget-venue {
-        flex-direction: column;
-        padding: 20px 15px;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 1.5);
+        gap: calc(var(--spacing-unit) * 2.5);
     }
+    .subtitle,
+    .description {
+    font-size: 1rem; /* Slightly smaller for better readability */
+    font-family: 'Poppins', sans-serif;
+    font-weight:150;
+    line-height: 1.6;
+    color: #3a2a1b;
+    margin-bottom: 10px; /* Adds spacing between text elements */
+}
 
     .left-text,
     .right-content {
@@ -1022,101 +1061,136 @@ button:hover {
     }
 
     .right-content video {
-        width: 100%;
+        width: 90%;
         height: auto;
+        border-radius: 6px;
+        margin: 0 auto;
+        display: block;
     }
-
-    /* Contact Form */
     .contact {
-        flex-direction: column;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(var(--spacing-unit) * 2);
         align-items: center;
     }
 
     .contact-container {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
+        width: 90%; 
+        max-width: 350px; 
+        margin: 0 auto;
+        display: grid;
+        gap: calc(var(--spacing-unit) * 1.5);
     }
 
     .form-group {
-        margin-bottom: 15px;
+        margin-bottom: calc(var(--spacing-unit) * 1.5); /* Reduced margin */
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 0.95rem; /* Slightly smaller font */
+        padding: calc(var(--spacing-unit) * 1); /* Reduced padding */
         width: 100%;
-        border-radius: 4px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .form-group textarea {
+        height: 100px; 
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+        outline: none;
     }
 
     button[type="submit"] {
-        font-size: 14px;
-        padding: 10px 20px;
+        font-size: 0.95rem;
+        padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 2); /* Reduced padding */
         width: 100%;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
-
-    /* Footer */
+    
+    button[type="submit"]:hover {
+        transform: translateY(-2px);
+    }
     .footer {
-        padding: 20px 15px;
+        padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 1.5); /* Reduced padding */
     }
 
     .footer .box-container {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 10px;
-        
+        gap: calc(var(--spacing-unit));
     }
+    
     .footer .box {
-        text-align: center; /* Center-align text for mobile */
+        text-align: center;
+        padding: calc(var(--spacing-unit));
     }
 
     .footer .box h3 {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+        font-size: 1.1rem; /* Reduced from 1.2rem */
+        margin-bottom: calc(var(--spacing-unit) * 0.75);
     }
+    
     .footer .box a {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+        font-size: 0.9rem;
+        display: block;
+        padding: calc(var(--spacing-unit) * 0.5) 0;
+        transition: color 0.3s ease, transform 0.3s ease;
     }
+    
+    .footer .box a:hover {
+        color: var(--primary-color);
+        transform: translateX(3px);
+    }
+    
     .footer .box p {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
-
 
     .footer .credit {
-        margin-top: 20px;
+        margin-top: calc(var(--spacing-unit) * 2);
         text-align: center;
         font-size: 0.8rem;
+        padding-top: calc(var(--spacing-unit));
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    /* Modal */
+    
     .modal-content {
-        width: 90%;
-        padding: 20px;
-        max-height: 80vh;
+        width: 85%; /* Reduced from 90% */
+        padding: calc(var(--spacing-unit) * 2);
+        max-height: 75vh; /* Reduced from 80vh */
         overflow-y: auto;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
-
-    /* Image Handling */
     .w-100 {
-        max-width: 100%;
+        max-width: 90%; 
         height: auto;
-        margin-bottom: 15px;
-        transition: none;
-    }
-
-    /* Spacing Utilities */
-    .mb-sm {
-        margin-bottom: 10px;
+        margin: 0 auto calc(var(--spacing-unit) * 1.5); 
+        transition: transform 0.3s ease;
+        border-radius: 6px;
+        display: block;
     }
     
-    .mb-md {
-        margin-bottom: 20px;
+    .w-100:hover {
+        transform: scale(1.01); 
     }
+    .mb-sm { margin-bottom: calc(var(--spacing-unit)); }
+    .mb-md { margin-bottom: calc(var(--spacing-unit) * 2); }
+    .mb-lg { margin-bottom: calc(var(--spacing-unit) * 3); }
     
-    .mb-lg {
-        margin-bottom: 30px;
-    }
+    /* Additional helper classes */
+    .hide-mobile { display: none !important; }
+    .show-mobile { display: block !important; }
 }
