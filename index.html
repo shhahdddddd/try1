@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Content-Security-Policy to allow external resources -->
+    <meta name="description" content="Plan your perfect event with Riyaz Event Management. We specialize in weddings, corporate events, and private celebrations, delivering unforgettable experiences.">
+    <meta name="keywords" content="event management India, wedding planning, corporate events, private celebrations, party planning,India">
+    <meta name="author" content="Riyaz Events">
+    <meta name="robots" content="index, follow">
     <title>Event Management and Planning</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -45,8 +48,8 @@
             </div>
     
             <div class="right-col">
-                <h1>Speak To Our Experts</h1>
-                <p>📅 Book a Free Quote/Consultation Today!</p>
+                <h1>📅 Book a Free Quote/Consultation Today!</h1>
+                <p>Speak To Our Experts</p>
                 <p>Fill in your details below, and we’ll get back to you within 24 hours.</p>
                 <form id="contact-form" method="post" action="submit-form.php">
                     <div class="form-group">
@@ -274,35 +277,37 @@
     </div>
   </div>
   <!-- Gallery -->
-    <section id="career" class="career">
-        <h2>Career</h2>
-        <p>Join our team and be part of creating amazing events.</p>
-        <button id="openModal">Join our team </button>
-    </section>
-    <div id="careerModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Apply for a Position</h3>
-            <form id="careerForm">
-                <label for="position">Select Position:</label>
-                <select id="position" name="position" required>
-                    <option value="Event Coordinator">Event Coordinator</option>
-                    <option value="Assistant Decorator">Assistant Decorator</option>
-                </select>
-    
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <button type="submit">Send Application</button>
-            </form>
-        </div>
+  <section id="career" class="career">
+    <h2>Career</h2>
+    <p>Join our team and be part of creating amazing events.</p>
+    <button id="openModal">Join our team</button>
+</section>
+
+<div id="careerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Apply for a Position</h3>
+        <form id="careerForm" action="submit-form.php" method="POST">
+            <label for="position">Select Position:</label>
+            <select id="position" name="position" required>
+                <option value="Event Coordinator">Event Coordinator</option>
+                <option value="Assistant Decorator">Assistant Decorator</option>
+            </select>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Send Application</button>
+        </form>
     </div>
+</div>
+
     <section class="budget-venue">
         <div class="left-text">
             <p class="subtitle">
@@ -330,18 +335,18 @@
                 <a href="#"> <i class="fas fa-arrow-right"></i> Service </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> About </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Gallery </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Pricing </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Career  </a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> Contact </a>
             </div>
     
             <!-- Contact Info -->
             <div class="box">
                 <h3>📞 Get in Touch</h3>
-                <a href="tel:+917350600038"><i class="fas fa-phone"></i> +91 7350600038</a>
+                <a href="https://wa.me/918149752215" target="_blank"><i class="fab fa-whatsapp"></i> +91 8149752215</a>
                 <a href="mailto:riyaz.events@hotmail.com"> <i class="fas fa-envelope"></i> riyaz.events@hotmail.com</a>
-                <a href="https://maps.app.goo.gl/GWtFMiihnzKVe3Ei8" target="_blank"> <i class="fas fa-map-marker-alt"></i>📍Goa,india </a>
+                <a href="https://maps.app.goo.gl/GWtFMiihnzKVe3Ei8" target="_blank"> <i class="fas fa-map-marker-alt"></i>📍Goa, India</a>
             </div>
+            
     
             <!-- Business Hours -->
             <div class="box">
