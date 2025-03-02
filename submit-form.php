@@ -15,7 +15,7 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Check if tables exist and create them if they don't
+// Check if career table exists and create it if it doesn't
 try {
     // Check if career table exists
     $pdo->query("SELECT 1 FROM career LIMIT 1");
@@ -26,17 +26,30 @@ try {
         name VARCHAR(255) NOT NULL,
         age INT(11) NOT NULL,
         email VARCHAR(255) NOT NULL,
+        applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )");
+}
+
+// Check if contact_form_submissions table exists and create it if it doesn't
+try {
+    // Check if contact_form_submissions table exists
+    $pdo->query("SELECT 1 FROM contact_form_submissions LIMIT 1");
+} catch(PDOException $e) {
+    $pdo->exec("CREATE TABLE contact_form_submissions (
+        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        phone VARCHAR(50) NOT NULL,
+        eventdate DATE NOT NULL,
+        eventtype VARCHAR(100) NOT NULL,
+        message TEXT NOT NULL,
+        submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
 }
 
 // Process form submissions
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        // Debugging: Check if data is received
-        if (empty($_POST)) {
-            die("<script>alert('No data received!'); window.location.href=document.referrer;</script>");
-        }
-
         if (isset($_POST['position'])) {
             // Career form submission
             $position = $_POST['position'];
@@ -49,11 +62,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 die("<script>alert('Invalid email format!'); window.location.href=document.referrer;</script>");
             }
 
+            // Insert into career table
             $stmt = $pdo->prepare("INSERT INTO career (position, name, age, email) VALUES (?, ?, ?, ?)");
             $result = $stmt->execute([$position, $name, $age, $email]);
 
             if ($result) {
                 echo "<script>alert('Application submitted successfully!'); window.location.href=document.referrer;</script>";
+            } else {
+                $errorInfo = $stmt->errorInfo();
+                die("<script>alert('Error: " . addslashes($errorInfo[2]) . "'); window.location.href=document.referrer;</script>");
+            }
+            exit;
+        }
+
+        if (isset($_POST['name']) && isset($_POST['email'])) {
+            // Contact form submission
+            $contact_name = $_POST['name'];
+            $contact_email = $_POST['email'];
+            $contact_phone = $_POST['phone'];
+            $contact_eventdate = $_POST['eventdate'];
+            $contact_eventtype = $_POST['eventtype'];
+            $contact_message = $_POST['message'];
+
+            // Validate email format
+            if (!filter_var($contact_email, FILTER_VALIDATE_EMAIL)) {
+                die("<script>alert('Invalid email format!'); window.location.href=document.referrer;</script>");
+            }
+
+            // Insert into contact_form_submissions table
+            $stmt = $pdo->prepare("INSERT INTO contact_form_submissions (name, email, phone, event_date, event_type, message) VALUES (?, ?, ?, ?, ?, ?)");
+            $result = $stmt->execute([$contact_name, $contact_email, $contact_phone, $contact_eventdate, $contact_eventtype, $contact_message]);
+
+            if ($result) {
+                echo "<script>alert('Message submitted successfully!'); window.location.href='thank_you.php';</script>";
             } else {
                 $errorInfo = $stmt->errorInfo();
                 die("<script>alert('Error: " . addslashes($errorInfo[2]) . "'); window.location.href=document.referrer;</script>");
@@ -68,10 +109,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Redirect if accessed without a POST request
-if (!isset($_SERVER['HTTP_REFERER'])) {
-    header('Location: index.html');
-} else {
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-}
-exit;
+
 ?>
