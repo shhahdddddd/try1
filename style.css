@@ -24,7 +24,7 @@ body {
 /* Navbar Styles */
 header {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 30px;
+    padding: 10px 20px;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -40,10 +40,11 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap:40px;
+   
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -283,6 +284,9 @@ button:hover {
     content: "•";
     color: var(--primary-color);
     margin-right: 8px;
+}
+.menu-toggle {
+    display: none; /* Hidden on desktop */
 }
 
 .service-card .btn {
@@ -1005,7 +1009,7 @@ button:hover {
     }
 
     .logo {
-        width: 60px;
+        width: 50px;
         height: auto;
         display: block; /* Ensure it’s visible */
         margin: 0 auto;
