@@ -1,4 +1,10 @@
 /* General Styles */
+@font-face {
+    font-family: 'Parisienne-Regular';
+    src: url('Parisienne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 :root {
     --primary-color: #df4296; /* Vibrant pink */
     --secondary-color: #ff7eb3; /* Soft pink */
@@ -409,7 +415,7 @@ button:hover {
 }
 
 .video-text h2 {
-    font-size: 62px; 
+    font-size: 70px; 
     font-weight: bolder;
     font-family: "Playfair Display", serif; /* More elegant & royal */
     color: white;
@@ -421,7 +427,7 @@ button:hover {
 }
 
 .video-text h6 {
-    font-size: 20px; /* Slightly larger */
+    font-size: 18px; /* Slightly larger */
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8);
     font-family: "Poppins", sans-serif;
@@ -430,9 +436,9 @@ button:hover {
 }
 
 .video-text h5 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
+    font-family: "Parisienne-Regular", sans-serif;
     color: rgba(231, 231, 231, 0.9);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
@@ -1078,7 +1084,7 @@ button:hover {
     }
 
     .video-text h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin: calc(var(--spacing-unit) * 0.5) 0;
         font-family: 'Playfair Display', serif;
         font-weight: 700;
@@ -1091,7 +1097,7 @@ button:hover {
     }
 
     .video-text h6 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin: calc(var(--spacing-unit) * 0.5) 0;
         font-family: 'Poppins', sans-serif;
         color: rgba(255, 255, 255, 0.9);
@@ -1099,9 +1105,9 @@ button:hover {
     }
 
     .video-text h5 {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         margin: calc(var(--spacing-unit) * 0.5) 0;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Parisienne-Regular', sans-serif;
         font-weight: 500;
         color: rgba(255, 255, 255, 0.95);
         text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
